@@ -9,7 +9,7 @@ Componenets of Node.js:
 - Node API
 - Event Loop
 
-Java script is a single threaded programming language. 
+Java script is a single threaded programming language.  
 Callback queues are calle on empty call stack -> 
   follow up on https://nodejs.dev/learn/the-nodejs-event-loop
 
