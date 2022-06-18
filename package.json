@@ -1,0 +1,23 @@
+{
+  "name": "course-weather",
+  "version": "1.0.0",
+  "description": "Practcing git and github workflows while refreshing my node knowledge.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PazJal/node-course-weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PazJal/node-course-weather/issues"
+  },
+  "homepage": "https://github.com/PazJal/node-course-weather#readme",
+  "dependencies": {
+    "postman-request": "^2.88.1-postman.31"
+  }
+}
