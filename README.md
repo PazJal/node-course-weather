@@ -14,4 +14,6 @@ Callback queues are calle on empty call stack ->
   follow up on https://nodejs.dev/learn/the-nodejs-event-loop
 
 
-
+### Lecture 34 - Handling errors in callbacks.
+Basic error convetion for callback - (error, value). 
+error will be undefined if all is well. 
