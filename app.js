@@ -1,6 +1,7 @@
 const request = require('postman-request');
-const {weatherAPIKey , geoCodingAPIKey} = require('./localInfo');
 
+const {weatherAPIKey , geoCodingAPIKey} = require('./localInfo');
+const geocode = require('./utils/geocode')
 // const url = `http://api.weatherstack.com/current?access_key=${weatherAPIKey}&query=&37.8267,-122.4233units=s`;
 
 // request({url: url, json: true} , (error , response) => {
@@ -14,15 +15,19 @@ const {weatherAPIKey , geoCodingAPIKey} = require('./localInfo');
 //   }
 // });
 
-const url = `https://eu1.locationiq.com/v1/search?key=${geoCodingAPIKey}&q=Los%20Angeles%20&format=json&limit=1`;
+// const url = `https://eu1.locationiq.com/v1/search?key=${geoCodingAPIKey}&q=Los%20Angeles%20&format=json&limit=1`;
 
-request({url, json: true} , (error , response) => {
-  if(error){
-    console.log("Unable to connect to Geolocation service.");
-  } else if (response.body.error) {
-    console.log("Geocoding failed.");
-  } else{
-    const {lat, lon} = response.body[0];
-    console.log(`lat: ${lat} lon: ${lon}`);
-  }
+// request({url, json: true} , (error , response) => {
+//   if(error){
+//     console.log("Unable to connect to Geolocation service.");
+//   } else if (response.body.error) {
+//     console.log("Geocoding failed.");
+//   } else{
+//     const {lat, lon} = response.body[0];
+//     console.log(`lat: ${lat} lon: ${lon}`);
+//   }
+// });
+
+geocode("Boston" , (err , data) => {
+  console.log(err, data);
 });
